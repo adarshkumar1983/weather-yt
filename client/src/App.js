@@ -15,8 +15,8 @@ function App() {
   return (
    <div>
   <Routes>
-  <Route path={"/"} element = {<Form/>}/>
-  <Route path ={'/weather'} element={<WeatherData/>} />
+  <Route path={"/weather"} element = {<Form/>}/>
+  <Route path ={'/weatherinfo'} element={<WeatherData/>} />
   </Routes>
     </div>
   );

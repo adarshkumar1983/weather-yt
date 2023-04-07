@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Form = () => {
@@ -13,7 +13,7 @@ const Form = () => {
         setZipCode('')  
 try {
   const weatherData = await axios.post('/', {zipcode})
-  navigate('/weather', {state: {data: weatherData.data}});
+  navigate('/weatherinfo', {state: {data: weatherData.data}});
 } catch (error) {
   if(error){
     alert('Zipcode is incorrect!')
@@ -34,7 +34,7 @@ try {
 
   return (
     <div className='w-full h-[100vh]'>
-    <h1 className='text-center p-5 text-[8vmin] font-bold'>ENTER ZIPCODE</h1>
+ <Link to = '/'><h1 className='text-center p-5 text-[8vmin] font-bold'>ENTER ZIPCODE</h1></Link>   
 
     <div className='w-full h-[55%] flex justify-center items-center'>
 
