@@ -12,7 +12,7 @@ const Form = () => {
         e.preventDefault();
         setZipCode('')  
 try {
-  const weatherData = await axios.post('/', {zipcode})
+  const weatherData = await axios.post('https://weather-api-520k.onrender.com', {zipcode})
   navigate('/weatherinfo', {state: {data: weatherData.data}});
 } catch (error) {
   if(error){

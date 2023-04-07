@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const hostname = 'localhost'
+const cors = require('cors');
 require('dotenv').config();
 const port = process.env.PORT || 5000;
-const cors = require('cors');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 
