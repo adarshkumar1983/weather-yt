@@ -34,7 +34,7 @@ try {
 
   return (
     <div className='w-full h-[100vh]'>
- <Link to = '/'><h1 className='text-center p-5 text-[8vmin] font-bold'>ENTER ZIPCODE</h1></Link>   
+ <Link to = '/weather'><h1 className='text-center p-5 text-[8vmin] font-bold'>ENTER ZIPCODE</h1></Link>   
 
     <div className='w-full h-[55%] flex justify-center items-center'>
 
