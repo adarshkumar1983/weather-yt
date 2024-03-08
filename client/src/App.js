@@ -1,25 +1,14 @@
-import Form from "./components/Form";
-import {Routes, Route} from 'react-router-dom'
-import WeatherData from './components/WeatherData'
+import React from 'react';
+import WeatherComponent from './components/WeatherData';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+const theme = createTheme();
 
-
-
-
-
-function App() {
-
-
-
-
-
+const App = () => {
   return (
-   <div>
-  <Routes>
-  <Route path={"/weather"} element = {<Form/>}/>
-  <Route path ={'/weatherinfo'} element={<WeatherData/>} />
-  </Routes>
-    </div>
+    <ThemeProvider theme={theme}>
+    <WeatherComponent />
+  </ThemeProvider>
   );
-}
+};
 
 export default App;
